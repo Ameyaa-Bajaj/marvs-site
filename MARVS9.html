@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>MARVS</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6ccff;
+    }
+    .navbar {
+      background-color: #f0e0ff;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .navbar a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .main-box {
+      background-color: white;
+      padding: 60px 30px;
+      min-height: 80vh;
+      text-align: center;
+    }
+    .typing-container {
+      font-family: 'Courier New', monospace;
+      font-size: 48px;
+      font-weight: bold;
+      color: black;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .blinking-cursor {
+      font-weight: 100;
+      font-size: 48px;
+      color: black;
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .section {
+      max-width: 700px;
+      margin: 40px auto;
+    }
+    .section h2 {
+      font-size: 28px;
+      color: #4b0082;
+    }
+    .section p {
+      font-size: 18px;
+      color: #333;
+    }
+    .group-video {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="MARVS9.html">Home</a>
+    <a href="MEET THE TEAM4.html">Meet the Team</a>
+    <a href="PAST MEMBERS3.html">Past Members</a>
+  </div>
+
+  <div class="main-box">
+    <div class="typing-container"><span id="typing-text">MARVS</span><span class="blinking-cursor">|</span></div>
+
+    <div class="section" id="origins">
+      <div class="typing-container" style="font-size: 32px; margin-top: 30px;">
+        <span id="typing-origins">Our Origins</span><span class="blinking-cursor">|</span>
+      </div>
+      <p>We are a group of amazing friends called MARVS. This is where it all began... it all started in 2nd grade where 4 friends formed a group called MAVA. The friends were Manvi, Ameyaa, Vedanshi, and Ananya. They all used to play games together as a group. They even added a new member whose name is Saisha, who was one year younger than the whole group, making the new group known as MAVAS. But some time later Ananya became distant, got angry very easily, and cried a lot. The group had no choice but to drop her. They distanced her and eventually just stopped playing with her. In 6th grade, they welcomed a new member whose name is Ritwika. The group is now called MARVS.</p>
+
+      <video class="group-video" controls>
+        <source src="VID-20250330-WA0022.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    function typeAndErase(elementId, text, speed) {
+      const el = document.getElementById(elementId);
+      let index = 0;
+      let direction = 1;
+
+      function animate() {
+        el.textContent = text.slice(0, index);
+
+        if (direction === 1) {
+          if (index < text.length) {
+            index++;
+          } else {
+            direction = -1;
+            setTimeout(animate, 1000); // pause before erasing
+            return;
+          }
+        } else {
+          if (index > 0) {
+            index--;
+          } else {
+            direction = 1;
+            setTimeout(animate, 500); // pause before typing again
+            return;
+          }
+        }
+
+        setTimeout(animate, speed);
+      }
+
+      animate();
+    }
+
+    typeAndErase("typing-text", "MARVS", 250);
+    typeAndErase("typing-origins", "Our Origins", 250);
+  </script>
+
+</body>
+</html>
+
+
+
+
