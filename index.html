@@ -1,76 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MARVS</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
+      background-color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: white;
-      display: flex;
     }
 
-    /* Sidebar */
-    nav {
-      background-color: #d8b4e2; /* lilac */
-      width: 200px;
-      height: 100vh;
-      padding: 20px;
-      box-sizing: border-box;
+    header {
+      text-align: center;
+      padding: 60px 20px 20px;
     }
 
-    nav a {
-      display: block;
-      margin-bottom: 20px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    /* Main content */
-    .main-content {
-      padding: 40px;
-      flex: 1;
-    }
-
-    .typewriter {
-      overflow: hidden;
-      border-right: 3px solid black;
-      white-space: nowrap;
-      margin: 0 auto 30px;
-      letter-spacing: 2px;
-      animation: typing 2s steps(5, end) 1, blink 0.75s step-end infinite;
+    .typing {
       font-size: 48px;
       font-weight: bold;
       color: black;
-      width: 0ch;
-    }
-
-    .typewriter-sub {
+      white-space: nowrap;
       overflow: hidden;
       border-right: 3px solid black;
-      white-space: nowrap;
-      margin: 0 auto 20px;
-      letter-spacing: 2px;
-      animation: typing-sub 3s steps(11, end) 1, blink 0.75s step-end infinite;
-      font-size: 32px;
-      font-weight: bold;
-      color: black;
       width: 0ch;
+      animation: typing 3s steps(6, end) infinite, blink 0.75s step-end infinite;
+      display: inline-block;
     }
 
     @keyframes typing {
-      from { width: 0ch; }
-      to { width: 5ch; }
-    }
-
-    @keyframes typing-sub {
-      from { width: 0ch; }
-      to { width: 11ch; }
+      0% { width: 0ch; }
+      50% { width: 5ch; }
+      100% { width: 0ch; }
     }
 
     @keyframes blink {
@@ -78,26 +41,99 @@
       50% { border-color: black; }
     }
 
-    p {
+    nav {
+      text-align: center;
+      margin-top: 20px;
+      background-color: #e6ccff;
+      padding: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    #origins .typing-subtitle {
+      font-size: 36px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 30px;
+      border-right: 3px solid black;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing2 3s steps(12, end) infinite, blink 0.75s step-end infinite;
+      display: inline-block;
+      width: 0ch;
+    }
+
+    @keyframes typing2 {
+      0% { width: 0ch; }
+      50% { width: 11ch; }
+      100% { width: 0ch; }
+    }
+
+    .origin-text {
+      max-width: 800px;
+      margin: 0 auto;
       font-size: 18px;
       line-height: 1.6;
-      max-width: 800px;
+    }
+
+    .photo-holder {
+      margin-top: 30px;
+      width: 80%;
+      max-width: 500px;
+      height: 300px;
+      background-color: #d9b3ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      color: #555;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #333;
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="typing">MARVS</div>
+  </header>
+
   <nav>
-    <a href="#">Home</a>
     <a href="#origins">Our Origins</a>
+    <a href="MEET THE TEAM4.html">Meet the Team</a>
+    <a href="PAST MEMBERS3.html">Past Members</a>
     <a href="secret.html">Secret???</a>
   </nav>
 
-  <div class="main-content">
-    <h1 class="typewriter">MARVS</h1>
-    <h2 class="typewriter-sub" id="origins">Our Origins</h2>
-    <p>
+  <section id="origins">
+    <div class="typing-subtitle">Our Origins</div>
+    <p class="origin-text">
       We are a group of amazing friends called MARVS. This is where it all began... it all started in 2nd grade where 4 friends formed a group called MAVA. The friends were Manvi, Ameyaa, Vedanshi, and Ananya. They all used to play games together as a group. They even added a new member whose name is Saisha, who was one year younger than the whole group, making the new group known as MAVAS. But some time later Ananya became distant, got angry very easily, and cried a lot. The group had no choice but to drop her. They distanced her and eventually just stopped playing with her. In 6th grade, they welcomed a new member whose name is Ritwika. The group is now called MARVS.
     </p>
-  </div>
+    <div class="photo-holder">
+      [Group Photo Placeholder]
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 MARVS. All rights reserved.
+  </footer>
 </body>
 </html>
