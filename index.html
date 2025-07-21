@@ -63,6 +63,7 @@
       height: 340px;
       background-color: #ddd;
       margin-top: 20px;
+      margin-left: 20px; /* This shifts it a bit to the right */
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -107,7 +108,7 @@
             index++;
           } else {
             direction = -1;
-            setTimeout(animate, 1000); // pause before erasing
+            setTimeout(animate, 1000);
             return;
           }
         } else {
@@ -115,7 +116,7 @@
             index--;
           } else {
             direction = 1;
-            setTimeout(animate, 500); // pause before typing again
+            setTimeout(animate, 500);
             return;
           }
         }
