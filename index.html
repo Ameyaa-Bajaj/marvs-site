@@ -1,143 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MARVS</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
       background-color: #e6ccff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
     }
-    .navbar {
-      background-color: #f0e0ff;
-      padding: 15px 0;
+    header {
       text-align: center;
+      padding: 60px 20px 20px;
     }
-    .navbar a {
-      margin: 0 20px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .main-box {
-      background-color: white;
-      padding: 60px 30px;
-      min-height: 80vh;
-      text-align: center;
-    }
-    .typing-container {
-      font-family: 'Courier New', monospace;
+    .typing {
       font-size: 48px;
       font-weight: bold;
       color: black;
-      display: inline-block;
       white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid black;
+      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+      display: inline-block;
     }
-    .blinking-cursor {
-      font-weight: 100;
-      font-size: 48px;
-      color: black;
-      animation: blink 1s infinite;
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
     }
     @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
+      from, to { border-color: transparent; }
+      50% { border-color: black; }
     }
-    .section {
-      max-width: 800px;
-      margin: 40px auto;
+    nav {
       text-align: center;
+      margin-top: 20px;
     }
-    .section h2 {
-      font-size: 28px;
-      color: #4b0082;
+    nav a {
+      text-decoration: none;
+      color: black;
+      margin: 0 20px;
+      font-size: 20px;
     }
-    .section p {
+    section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    #origins .typing-subtitle {
+      font-size: 36px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 30px;
+      border-right: 3px solid black;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(30, end), blink 0.75s step-end infinite;
+      display: inline-block;
+    }
+    .origin-text {
+      max-width: 800px;
+      margin: 0 auto;
       font-size: 18px;
-      color: #333;
-      text-align: justify;
+      line-height: 1.6;
     }
-    .group-photo-placeholder {
-      width: 100%;
-      max-width: 600px;
-      height: 340px;
-      background-color: #eee;
-      margin: 20px auto 0;
-      border-radius: 10px;
+    .photo-holder {
+      margin-top: 30px;
+      width: 80%;
+      max-width: 500px;
+      height: 300px;
+      background-color: #d9b3ff;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #666;
-      font-size: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 12px;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #333;
     }
   </style>
 </head>
 <body>
-
-  <div class="navbar">
-    <a href="index.html">Home</a>
-    <a href="MEET THE TEAM4.html">Meet the Team</a>
-    <a href="PAST MEMBERS3.html">Past Members</a>
-  </div>
-
-  <div class="main-box">
-    <div class="typing-container"><span id="typing-text">MARVS</span><span class="blinking-cursor">|</span></div>
-
-    <div class="section" id="origins">
-      <div class="typing-container" style="font-size: 32px; margin-top: 30px;">
-        <span id="typing-origins">Our Origins</span><span class="blinking-cursor">|</span>
-      </div>
-      <p>
-        We are a group of amazing friends called MARVS. This is where it all began... it all started in 2nd grade where 4 friends formed a group called MAVA. The friends were Manvi, Ameyaa, Vedanshi, and Ananya. They all used to play games together as a group. They even added a new member whose name is Saisha, who was one year younger than the whole group, making the new group known as MAVAS. But some time later Ananya became distant, got angry very easily, and cried a lot. The group had no choice but to drop her. They distanced her and eventually just stopped playing with her. In 6th grade, they welcomed a new member whose name is Ritwika. The group is now called MARVS.
-      </p>
-
-      <div class="group-photo-placeholder">Group Photo Placeholder</div>
+  <header>
+    <div class="typing">MARVS</div>
+  </header>
+  <nav>
+    <a href="#origins">Our Origins</a>
+    <a href="team.html">Meet the Team</a>
+    <a href="past.html">Past Members</a>
+    <a href="secret.html">Secret???</a>
+  </nav>
+  <section id="origins">
+    <div class="typing-subtitle">Our Origins</div>
+    <p class="origin-text">
+      We are a group of amazing friends called MARVS. This is where it all began... it all started in 2nd grade where 4 friends formed a group called MAVA. The friends were Manvi, Ameyaa, Vedanshi, and Ananya. They all used to play games together as a group. They even added a new member whose name is Saisha, who was one year younger than the whole group, making the new group known as MAVAS. But some time later Ananya became distant, got angry very easily, and cried a lot. The group had no choice but to drop her. They distanced her and eventually just stopped playing with her. In 6th grade, they welcomed a new member whose name is Ritwika. The group is now called MARVS.
+    </p>
+    <div class="photo-holder">
+      [Group Photo Placeholder]
     </div>
-  </div>
-
-  <script>
-    function typeAndErase(elementId, text, speed) {
-      const el = document.getElementById(elementId);
-      let index = 0;
-      let direction = 1;
-
-      function animate() {
-        el.textContent = text.slice(0, index);
-
-        if (direction === 1) {
-          if (index < text.length) {
-            index++;
-          } else {
-            direction = -1;
-            setTimeout(animate, 1000); // pause before erasing
-            return;
-          }
-        } else {
-          if (index > 0) {
-            index--;
-          } else {
-            direction = 1;
-            setTimeout(animate, 500); // pause before typing again
-            return;
-          }
-        }
-
-        setTimeout(animate, speed);
-      }
-
-      animate();
-    }
-
-    typeAndErase("typing-text", "MARVS", 250);
-    typeAndErase("typing-origins", "Our Origins", 250);
-  </script>
-
+  </section>
+  <footer>
+    &copy; 2025 MARVS. All rights reserved.
+  </footer>
 </body>
 </html>
-
-
 
 
