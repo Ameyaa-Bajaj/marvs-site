@@ -25,14 +25,15 @@
       white-space: nowrap;
       overflow: hidden;
       border-right: 3px solid black;
-      animation: typing 3s steps(5, end) infinite, blink 0.75s step-end infinite;
+      width: 0ch;
+      animation: typing 3s steps(6, end) infinite, blink 0.75s step-end infinite;
       display: inline-block;
     }
 
     @keyframes typing {
-      0% { width: 0; }
-      50% { width: 6ch; }
-      100% { width: 0; }
+      0% { width: 0ch; }
+      50% { width: 5ch; }
+      100% { width: 0ch; }
     }
 
     @keyframes blink {
@@ -68,14 +69,15 @@
       border-right: 3px solid black;
       white-space: nowrap;
       overflow: hidden;
-      animation: typing2 3s steps(11, end) infinite, blink 0.75s step-end infinite;
+      animation: typing2 3s steps(12, end) infinite, blink 0.75s step-end infinite;
       display: inline-block;
+      width: 0ch;
     }
 
     @keyframes typing2 {
-      0% { width: 0; }
-      50% { width: 12ch; }
-      100% { width: 0; }
+      0% { width: 0ch; }
+      50% { width: 11ch; }
+      100% { width: 0ch; }
     }
 
     .origin-text {
@@ -115,7 +117,7 @@
 
   <nav>
     <a href="#origins">Our Origins</a>
-    <a href="MEET THE TEAM4.html">Meet the Team</a>
+    <a href="MEET THE TEAM.html">Meet the Team</a>
     <a href="PAST MEMBERS3.html">Past Members</a>
     <a href="secret.html">Secret???</a>
   </nav>
